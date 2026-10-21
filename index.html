@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta name="description" content="Fieldnote is a calm starting point for finding images by subject and mood.">
+  <title>Fieldnote — Find your next visual reference</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Fieldnote home">
+      <span class="brand-mark" aria-hidden="true">F.</span>
+      <span>Fieldnote</span>
+    </a>
+    <span class="header-note">A visual index for curious minds</span>
+  </header>
+
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Collect a point of view</p>
+      <h1 id="page-title">Find the feeling<br>you’re looking for.</h1>
+      <p class="lede">Search a subject, a place, or a passing thought. Your next visual reference starts here.</p>
+    </section>
+
+    <section class="search-panel" aria-label="Image search">
+      <form id="search-form" role="search">
+        <label for="search-input">What would you like to explore?</label>
+        <div class="search-row">
+          <input id="search-input" name="query" type="search" placeholder="Try “quiet coast” or “botanical shapes”" autocomplete="off">
+          <button id="search-button" type="submit"><span>Search</span><span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
+      <div class="suggestions" aria-label="Quick topic suggestions">
+        <span class="suggestions-label">Start with</span>
+        <button class="chip" type="button">Nature</button>
+        <button class="chip" type="button">Architecture</button>
+        <button class="chip" type="button">Still life</button>
+        <button class="chip" type="button">Color studies</button>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Search results">
+      <div class="gallery-heading">
+        <p class="eyebrow">Your collection</p>
+        <p class="result-count" id="result-count">Results will appear here</p>
+      </div>
+      <p class="empty-state" id="empty-state">Search to see what catches your eye.</p>
+      <div id="results" aria-live="polite" aria-label="Image results"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>FIELDNOTE · VISUAL RESEARCH, AT YOUR PACE</span><span>01 / 01</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
