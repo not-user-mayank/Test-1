@@ -46,8 +46,9 @@
         <p class="eyebrow">Your collection</p>
         <p class="result-count" id="result-count">Results will appear here</p>
       </div>
-      <p class="empty-state" id="empty-state">Search to see what catches your eye.</p>
-      <div id="results" aria-live="polite" aria-label="Image results"></div>
+      <p class="loading-state" id="loading-state" role="status" hidden><span class="spinner" aria-hidden="true"></span> Searching the Commons…</p>
+      <p class="empty-state" id="empty-state" role="status" aria-live="polite">Search to see what catches your eye.</p>
+      <div id="results" aria-live="polite" aria-label="Image results" aria-busy="false"></div>
     </section>
   </main>
 

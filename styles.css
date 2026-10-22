@@ -109,3 +109,36 @@ h1 { margin: 0; font-family: var(--serif); font-size: clamp(3rem, 7vw, 6rem); fo
   color: var(--muted);
   font-size: .72rem;
 }
+
+/* Loading, empty, and result states */
+.loading-state[hidden], .empty-state[hidden] { display: none; }
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  margin: 0;
+  padding: 4rem 1rem;
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+.spinner {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid var(--line);
+  border-top-color: var(--forest);
+  border-radius: 50%;
+  animation: spin .75s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.result-card { animation: result-enter .35s ease both; }
+@keyframes result-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#search-button:disabled { cursor: wait; opacity: .75; }
+@media (max-width: 420px) {
+  #results { grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); }
+  .loading-state { padding: 3rem .5rem; }
+}
